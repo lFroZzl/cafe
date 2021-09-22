@@ -1,0 +1,28 @@
+<h1 class="title">Dashboard</h1>
+
+<h3 class="title">Tablas</h3>
+
+<div class="size-main">
+    <%= column_chart @sale_last_12_months, title: "Ventas en los ultimos 12 meses", prefix: "$", label: "Ventas", thousands: "."%>
+</div>
+<div class="size-div">
+    <%= column_chart @quantity_last_12_months, title: "Cantidad en los ultimos 12 meses", label: "Cantidad" %>
+</div>
+<div class="size-div">
+    <%= column_chart @average_last_12_months, title: "Promedio de venta mensual en ultimos 12 meses", label: "Promedio ventas", prefix: "$", thousands: "." %>
+</div>
+
+<h3 class="title">PieCharts</h3>
+
+<div class="pie-chart">
+    <%= pie_chart @pie_chart_origin_12_months, title: "Ultimos 12 meses", label: "Cantidad" %>
+</div>
+<div class="pie-chart">
+    <%= pie_chart @pie_chart_origin_6_months, title: "Ultimos 6 meses", label: "Cantidad" %>
+</div>
+<div class="pie-chart">
+    <%= pie_chart @pie_chart_origin_3_months, title: "Ultimos 3 meses", label: "Cantidad" %>
+</div>
+<div class="pie-chart">
+    <%= pie_chart @pie_chart_origin_this_months, title: "Ultimo mes", label: "Cantidad" %>
+</div>
